@@ -91,11 +91,12 @@ th {
 
 }
 
-  th, td {
-    &[data-sp-display="none"] {
-      display: none;
-    }
+th, td {
+  &[data-sp-display="none"] {
+    display: none;
   }
+}
+
 
 
 
