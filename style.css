@@ -97,7 +97,13 @@ th {
       display: none;
     }
   }
+  th, td {
+    &[data-sp-display="none"] {
+      background:red;
+    }
+  }
 }
+
 
 
 
