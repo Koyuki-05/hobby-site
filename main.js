@@ -1,7 +1,7 @@
 const DATA_TYPES = {
   アーティスト名: "string",
   おすすめ曲: "string",
-  Wikipediaの紹介: "string",
+  Wikipediaの引用: "string",
   ジャンル: "category", // 範疇情報
   おすすめ度: "number",
 };
@@ -9,7 +9,7 @@ const DATA_TYPES = {
 const DISPLAIES_FOR_SP = {
   アーティスト名: "primary",
   おすすめ曲: "none",
-  Wikipediaの紹介: "none",
+  Wikipediaの引用: "none",
   ジャンル: "secondary",
   おすすめ度: "secondary",
 };
@@ -337,4 +337,5 @@ function drawGraph(values) {
   }
 
 }
+
 
