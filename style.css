@@ -88,4 +88,13 @@ th {
     width: 10px;
     background-color: maroon;
   }
+
+}
+
+@media (max-width: 600px) {
+  th, td {
+    &[data-sp-display="none"] {
+      display: none;
+    }
+  }
 }
