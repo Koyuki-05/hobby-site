@@ -6,6 +6,14 @@ const DATA_TYPES = {
   おすすめ度: "number",
 };
 
+const DISPLAIES_FOR_SP = {
+  アーティスト名: "primary",
+  おすすめ曲: "none",
+  Wikipediaの紹介: "none",
+  ジャンル: "secondary",
+  おすすめ度: "secondary",
+};
+
 const numeralColumns = {};
 const categoricalColumns = {};
 
@@ -112,6 +120,7 @@ function createTableContents(records) {
     const th = document.createElement("th");
     th.textContent = key;
     th.dataset.type = DATA_TYPES[key];
+    th.dataset.spDisplay = DISPLAIES_FOR_SP[Key]; //スマホの表示情報を dataset に加える
     th.addEventListener("click", function () {
       setSort(th, records);
     });
@@ -149,6 +158,7 @@ function createTableBodyRows(tbody, records, keyword) {
 
     for (let key in record) {
       const td = document.createElement("td");
+      td.dataset.spDisplay = DISPLAIES_FOR_SP[key]; // スマホの表示情報を dataset に与える
       const text = record[key];
 
       // keywordが指定されている場合、キーワードを強調表示する
@@ -325,4 +335,5 @@ function drawGraph(values) {
     label.className = "label"; // ラベルのCSSクラスを設定
     div.append(label); // ラベルをバーに追加
   }
+
 }
