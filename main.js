@@ -120,7 +120,7 @@ function createTableContents(records) {
     const th = document.createElement("th");
     th.textContent = key;
     th.dataset.type = DATA_TYPES[key];
-    th.dataset.spDisplay = DISPLAIES_FOR_SP[Key]; //スマホの表示情報を dataset に加える
+    th.dataset.spDisplay = DISPLAIES_FOR_SP[key]; //スマホの表示情報を dataset に加える
     th.addEventListener("click", function () {
       setSort(th, records);
     });
@@ -337,3 +337,4 @@ function drawGraph(values) {
   }
 
 }
+
